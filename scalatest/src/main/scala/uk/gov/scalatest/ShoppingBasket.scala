@@ -29,8 +29,31 @@ class ShoppingBucket(var itemList: List[Item]){
     * checkOutwithOffer applies discount after the actual amount is calculated.
     * @author jay
     * @params Returns a double that is the amount to be billed
+    * 
     */
     def checkOutwithOffer():Double={
-      0.0
+      val amt = checkOut()
+      var appleCount:Int=0
+      var orangeCount:Int=0
+      var discount:Double=0.0
+      /* First get the count of both apples and Oranges in the shopping cart)*/
+      for(item<-itemList){
+        item match{
+          case item: Apple=> appleCount+=1
+          case item: Orange=> orangeCount+=1
+          case others=> 0
+        }
+        
+      // calculate the discount based on the counts
+       discount=(appleCount/2)*Apple.price+(orangeCount/3)*Orange.price
+         
+      }
+      
+      //Actual amount minus the discount is returned as the billable amount
+      amt-discount
+       
+      
     }
+    
+    
 }

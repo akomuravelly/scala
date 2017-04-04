@@ -2,11 +2,12 @@ package uk.gov.scalatest
 
 /* Companion object for the apply method.*/
 object Apple{
+  val price:Double = 60.0
   def apply() = {
-    new Apple
+    new Apple(price)
   }
 }
 /*
  * Light weight Apple class
  */
-class Apple(price:Double=60.0) extends Item(name="Apple",price=price)
+class Apple(price:Double) extends Item(name="Apple",price=price)
