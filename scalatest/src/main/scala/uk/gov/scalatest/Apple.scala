@@ -1,5 +1,11 @@
 package uk.gov.scalatest
 
+
+object Apple{
+  def apply() = {
+    new Apple
+  }
+}
 /*
  * Light weight Apple class
  */

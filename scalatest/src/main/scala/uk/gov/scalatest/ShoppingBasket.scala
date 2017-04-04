@@ -11,7 +11,8 @@ class ShoppingBucket(var itemList: List[Item]){
    * @params Returns a double
    */
     def checkOut():Double ={
-      0.0
+      val amt = itemList.foldLeft(0.0)((acc,elem)=>acc+elem.price)
+      amt
     }
     
     
@@ -21,7 +22,7 @@ class ShoppingBucket(var itemList: List[Item]){
     * @param list of Items that need to be added. Supposed to add to the shopping basket list of items.
     */
    def addItem(it:List[Item]):Unit={
-     itemList
+     itemList=itemList++it
    }
     
     
