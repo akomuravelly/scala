@@ -8,7 +8,7 @@ class ShoppingBucket(var itemList: List[Item]){
   /**
    * checkOut method is used to calculate the amount. This is a plance calculation of amount with out involving any discounts or offers
    * @author jay
-   * @params Returns a double
+   * @params Returns a double that is the amount to be billed
    */
     def checkOut():Double ={
       val amt = itemList.foldLeft(0.0)((acc,elem)=>acc+elem.price)
@@ -25,5 +25,12 @@ class ShoppingBucket(var itemList: List[Item]){
      itemList=itemList++it
    }
     
-    
+   /**
+    * checkOutwithOffer applies discount after the actual amount is calculated.
+    * @author jay
+    * @params Returns a double that is the amount to be billed
+    */
+    def checkOutwithOffer():Double={
+      0.0
+    }
 }
