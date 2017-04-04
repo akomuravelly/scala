@@ -1,6 +1,6 @@
 package uk.gov.scalatest
 
-
+/* Companion object for the apply method.*/
 object Apple{
   def apply() = {
     new Apple
