@@ -1,6 +1,6 @@
 package uk.gov.scalatest
 
-/* Companion object for the apply method. test*/
+/* testingCompanion object for the apply method. test*/
 object Apple{
   val price:Double = 60.0
   def apply() = {
